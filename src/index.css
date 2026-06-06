@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+  --color-clean-bg: #030712;
+  --color-clean-card: rgba(255, 255, 255, 0.05);
+  --color-clean-border: rgba(255, 255, 255, 0.1);
+}
+
+@utility custom-glow-blue {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+@utility custom-glow-purple {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
+}
+
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.25);
+    border-radius: 9999px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.45);
+  }
+  
+  .light ::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.25);
+    border-radius: 9999px;
+  }
+  
+  .light ::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.45);
+  }
+}
+
